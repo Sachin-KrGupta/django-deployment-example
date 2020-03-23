@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ol class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'index' %}">Brand</a></li>
+                <li><a href="{% url 'admin:index' %}" class="navbar-link">Admin</a></li>
+                <li><a href="{% url 'basic_app:other' %}" class="navbar-link">Other</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {% block body_block %}
+
+        <!-- Anthing outside it will be inherited -->
+
+        {% endblock %}
+
+    </div>
+    
+</body>
+</html>
